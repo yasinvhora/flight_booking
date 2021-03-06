@@ -34,7 +34,7 @@
 
                             <li class="padding-tb-8px border-bottom-1 border-grey-1"><strong class="margin-right-30px">To Time & From Time</strong><?php echo $row['to_time'] ?> From Time : <?php echo $row['from_time'] ?> </li>
                             
-                            <li class="padding-tb-8px border-bottom-1 border-grey-1"><strong class="margin-right-30px">Price</strong>Rs. <?php echo $row['from_time'] ?></li>
+                            <li class="padding-tb-8px border-bottom-1 border-grey-1"><strong class="margin-right-30px">Price</strong>Rs. <?php echo $row['price'] ?></li>
                             <li class="padding-tb-8px border-bottom-1 border-grey-1"><strong class="margin-right-30px">Name </strong><?php echo $row['first_name'] ?> &nbsp;<?php echo $row['last_name'] ?> </li>
                             <li class="padding-tb-8px border-bottom-1 border-grey-1"><strong class="margin-right-30px">Email & Mobile</strong><?php echo $row['email'] ?>&nbsp; <?php echo $row['mobile'] ?></li>
                             <li class="padding-tb-8px border-bottom-1 border-grey-1"><strong class="margin-right-30px">Payment Method</strong><?php echo $row['payment_method'] ?></li>

@@ -60,6 +60,7 @@
 
                     <div class="text-center margin-bottom-30px">
                         <a href="#"><img src="images/logo-light.png" alt=""></a>
+                    </br>Agent Login
                     </div>
 
                     <div class="padding-30px text-white background-dark border-1 border-grey-4 box-shadow">
@@ -78,6 +79,7 @@
                              <br> <input type="submit" class="form-control rounded-0 background-green-4 border-0"  name="agent_login">
                             </div>
                                  new Agent ? <a href="agent_register.php"><b style="padding-left: 5px; color:red;">Register</b></a>
+                                 <a href="index.php" >Go Home</a>
                             </div>
                         </form>
                     </div>
