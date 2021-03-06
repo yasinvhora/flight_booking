@@ -7,7 +7,7 @@
          $departing_time=$_GET['departing_time'];
                  
                 $search_data=array('from_flight'=>$from_flight,'to_flight'=>$to_flight,'departing_time'=>$departing_time);
-
+               
 
                 
   }
@@ -36,12 +36,15 @@
                
  <?php
     
-
-
+                            
                         $flight_array=get_flight_search($conn,$key,$search_data);
                         $avi=sizeof($flight_array);
+                         print_r($avi);
+                         die();
                        if($avi!=0){
                        for($i=0;$i<sizeof($flight_array);$i++){
+
+                       $flight_id1=$flight_array[$i]['flight_id'];
                         $airline_name=$flight_array[$i]['airline_name'];
                         $airport=$flight_array[$i]['airport'];
                         $airport1=$flight_array[$i]['airport1'];
@@ -67,7 +70,8 @@
                                 <div class="padding-20px">
                                     <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from:  <?php echo $airport ?></span>to: <?php echo $airport1 ?></a></h3>
                                     <br>
-                                    <a href="javascript:void(0)" onclick="manage_cart('<?php echo $list['flight_id'] ?>','add')" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+
+                                    <a href="javascript:void(0)" onclick="manage_cart('<?php echo $flight_id1 ?>','add')" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
                                             Desparture :  <span class="text-third-color margin-right-5px"><?php echo $to_time ?></span> </a>
