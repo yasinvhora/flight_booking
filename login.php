@@ -79,8 +79,21 @@
                              <br> <input type="submit" class="form-control rounded-0 background-green-4 border-0"  name="login">
                             </div>
                                  new user ? <a href="register.php"><b style="padding-left: 5px; color:red;">Register</b></a></br>
-                                 Agent Login ? <a href="agent_login.php"><b style="padding-left: 5px; color:red;">Login</b></a>
-                                 <a href="index.php" >Go Home</a>
+                                 Agent Login ? <a href="agent_login.php"><b style="padding-left: 5px; color:red;">Login</b></a></br>
+                                 <a href="index.php" ><i class="fa fa-home" aria-hidden="true" style="padding-left: 100px;"> Home</i></a>
+                                 <div class="btn-group open">
+  <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> User</a>
+  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+    <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+    <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+    <li><a href="#"><i class="fa fa-ban fa-fw"></i> Ban</a></li>
+    <li class="divider"></li>
+    <li><a href="#"><i class="fa fa-unlock"></i> Make admin</a></li>
+  </ul>
+</div>
                             </div>
 
                         </form>
