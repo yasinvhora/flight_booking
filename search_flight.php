@@ -39,12 +39,12 @@
                             
                         $flight_array=get_flight_search($conn,$key,$search_data);
                         $avi=sizeof($flight_array);
-                         print_r($avi);
-                         die();
+                        
                        if($avi!=0){
                        for($i=0;$i<sizeof($flight_array);$i++){
-
+                       
                        $flight_id1=$flight_array[$i]['flight_id'];
+                    
                         $airline_name=$flight_array[$i]['airline_name'];
                         $airport=$flight_array[$i]['airport'];
                         $airport1=$flight_array[$i]['airport1'];

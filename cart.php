@@ -47,7 +47,7 @@
 
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: <?php echo $airport1 ?></span>to: <?php echo $airport ?></a></h3>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: <?php echo $airport ?></span>to: <?php echo $airport1 ?></a></h3>
                                     <a href="index.php" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px text-small">Change Flight </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
@@ -116,7 +116,22 @@
                                     <input type="radio" class="form-control" value="pay_you"  name="payment_method" rows="3">Pay you</input>
                                 </div>
                                 <a href="index.php" class="btn-sm btn-lg text-dark text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Go Home</a>
+                              <?php
+                                          if(isset($_SESSION['user_front_login']) || $_SESSION['agent_username'])  
+                                       {   
+                                     ?>
                                 <button type="submit" name="book_flight_btn"  class="btn-sm btn-lg  background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px">CONFIRM BOOKING</button>
+
+                                <?php
+                                        } 
+                                          else {
+                                            ?>   
+                                                 <a href="login.php" class="btn-sm btn-lg text-dark text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Login now</a>
+                                             <?php
+                                          }
+                                                       # code...
+                                                     
+                                ?>
                             </form>
                         </div>
                     </div>
