@@ -1,13 +1,12 @@
 <?php
-
-   include './database/controller.php';
+     include './database/controller.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
-    <title>Agent Login</title>
+    <title>Travelz HTML5 Multipurpose Travel Template</title>
     <meta name="author" content="Nile-Theme">
     <meta name="robots" content="index follow">
     <meta name="googlebot" content="index follow">
@@ -60,27 +59,53 @@
 
                     <div class="text-center margin-bottom-30px">
                         <a href="#"><img src="images/logo-light.png" alt=""></a>
-                    </br>Agent Login
                     </div>
+                    <?php
+                        $user_id='';
+                        $user_id=$_SESSION['id'];
 
+                        $sql = "SELECT * from users where id='$user_id'";
+                        $show = $conn->query($sql);
+                        $row = $show->fetch_assoc();
+                    ?>
                     <div class="padding-30px text-white background-dark border-1 border-grey-4 box-shadow">
                         <form method="post">
-                            <div class="form-group">
+                              <div class="form-group">
                                 <label for="inputEmail3" class="col-form-label"><strong>Username</strong></label>
-                                <input type="text" name="username" class="form-control rounded-0 background-grey-4 border-0" id="inputEmail3" placeholder="Email">
+                                <input type="text" class="form-control rounded-0 background-4 border-0" id="inputusername" value="<?php echo $row['user_name'];?>"
+                                name="username" placeholder="username">
                             </div>
+                            
+                               <div class="form-group">
+                                <label for="inputEmail3" class="col-form-label"><strong>Mobile</strong></label>
+                                <input type="text" class="form-control rounded-0 backgroun-4 border-0" id="inputmobile" value="<?php echo $row['mobile'];?>"
+                                name="Mobile" placeholder="Mobile">
+                                </div>
+                                
+                                 <div class="form-group">
+                                <label for="inputEmail3" class="col-form-label"><strong>Address</strong></label>
+                                <input type="text" class="form-control rounded-0 background-4 border-0" id="inputaddress"    value="<?php echo $row['address'];?>"
+                                name="Address" placeholder="Address">
+                                </div>
+                             
+
+                             <div class="form-group">
+                                <label for="inputEmail3" class="col-form-label"><strong>Email</strong></label>
+                                <input type="email" class="form-control rounded-0 background-4 border-0" id="inputEmail3" value="<?php echo $row['email'];?>"  placeholder="Email" name="email">
+                            </div>
+
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-form-label"><strong>Password</strong></label>
-                                <input type="password" name="password" class="form-control rounded-0 background-grey-4 border-0" id="inputPassword3" placeholder="Password">
+                                <input type="text" class="form-control rounded-0 background-4 border-0" id="inputPassword3" value="<?php echo $row['password'];?>" 
+                                name="password" placeholder="Password">
                             </div>
-                                     
-                           
+                            
+                        
                             <div class="form-group">
-                             <br> <input type="submit" class="form-control rounded-0 background-green-4 border-0"  name="agent_login">
+                                <input type="submit" value="Update" class="btn btn-primary btn-block rounded-0 background-main-color" name="update">
                             </div>
-                                 new Agent ? <a href="agent_register.php"><b style="padding-left: 5px; color:red;">Register</b></a>
-                               
-                            </div>
+                                         Go back to homepage ? <a href="index.php"><b style="padding-left: 5px; color:red;">Home</b></a>
+
                         </form>
                     </div>
                 </div>
