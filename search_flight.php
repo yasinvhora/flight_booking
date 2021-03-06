@@ -20,7 +20,7 @@
             <div class="row">
 
                 <!-- Sidebar -->
-                <div class="col-lg-3 sticky-sidebar">
+                <div class="col-lg-12 sticky-sidebar">
                     
                     <!-- Hotels Search -->
                     
@@ -33,11 +33,7 @@
                 
                                        <!-- Price Search -->
 
-                </div>
-                <!-- //  Sidebar -->
-                            
-                <!-- Content -->
-                <div class="col-lg-9">
+               
  <?php
     
 

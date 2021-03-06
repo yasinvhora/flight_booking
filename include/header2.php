@@ -56,6 +56,17 @@
                         </ul>
                         <!-- // Social -->
                     </div>
+                                    <div class="col-sm d-none d-sm-block">
+
+                                <ul class="user-area list-inline float-right margin-0px text-white">
+                                    <li class="list-inline-item" style="padding-right: 10px; color: black;"><h6></h6></li>
+                                    
+                                      <a class="btn btn-success" href="cart.php" ><i class="fa fa-shopping-cart fa-fw"></i> Cart : <?php echo $totalTicket ?> </a>
+  
+                       </ul>
+                    </div> 
+
+
                     <div class="col-sm d-none d-sm-block">
                       
                            <?php   

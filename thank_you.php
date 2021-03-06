@@ -43,7 +43,7 @@
                         </ul>
                         <div class="margin-top-15px">
                             <a href="#" class="btn-sm btn-lg text-dark text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Go Home</a>
-                            <a href="#" class="btn-sm btn-lg  background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px">print  Page</a>
+                            <button onclick="window.print()" class="btn-sm btn-lg  background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px">print  Page</button>
                         </div>
                     </div>
                     <!-- form -->

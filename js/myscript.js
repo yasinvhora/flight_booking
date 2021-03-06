@@ -1,8 +1,5 @@
 function manage_cart(flight_id,type){
   
-
- 
-    
     jQuery.ajax({
       url:'manage_cart.php',
       type:'POST',
